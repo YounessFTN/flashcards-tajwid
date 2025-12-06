@@ -605,7 +605,7 @@
           Tous les groupes
         </button>
         <button class="filter-btn" data-filter="qalqala">
-          <span class="filter-emoji">🟦</span>
+          <span class="filter-emoji">🟧</span>
           <span>Qalqala</span>
         </button>
         <button class="filter-btn" data-filter="hams">
@@ -617,7 +617,7 @@
           <span>Tafkhim</span>
         </button>
         <button class="filter-btn" data-filter="asafir">
-          <span class="filter-emoji">🔷</span>
+          <span class="filter-emoji">🔶</span>
           <span>Asafir</span>
         </button>
       </div>
@@ -656,7 +656,7 @@
       <p class="hint" style="margin-top: 30px">
         <strong>📚 Rappel des 4 groupes :</strong><br /><br />
 
-        <strong>🟦 Qalqala (5 lettres) :</strong> ق – ط – ب – ج – د<br />
+        <strong>🟧 Qalqala (5 lettres) :</strong> ق – ط – ب – ج – د<br />
         → Elles "rebondissent" quand elles sont sukun (ْ)<br /><br />
 
         <strong>🟡 Hams (10 lettres) :</strong> ف – ح – ث – ه – ش – خ – ص – س –
@@ -666,92 +666,97 @@
         <strong>🔺 Tafkhim (7 lettres) :</strong> خ – ص – ض – غ – ط – ق – ظ<br />
         → Lettres lourdes/épaisses (خُصَّ ضَغْطٍ قِظْ)<br /><br />
 
-        <strong>🔷 Asafir (3 lettres) :</strong> س – ز – ص<br />
+        <strong>🔶 Asafir (3 lettres) :</strong> س – ز – ص<br />
         → Lettres sifflantes
       </p>
     </div>
-
     <script>
       const arabicLetters = [
-        // 🟦 Qalqala (5 lettres)
-        {
-          arabic: "ق",
-          groups: ["qalqala"],
-          info: "🟦 QALQALA - Rebondissante",
-        },
-        {
-          arabic: "ط",
-          groups: ["qalqala", "tafkhim"],
-          info: "🟦 QALQALA + 🔺 TAFKHIM",
-        },
-        {
-          arabic: "ب",
-          groups: ["qalqala"],
-          info: "🟦 QALQALA - Rebondissante",
-        },
-        {
-          arabic: "ج",
-          groups: ["qalqala"],
-          info: "🟦 QALQALA - Rebondissante",
-        },
-        {
-          arabic: "د",
-          groups: ["qalqala"],
-          info: "🟦 QALQALA - Rebondissante",
-        },
-
-        // 🟡 Hams (10 lettres)
-        { arabic: "ف", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
-        { arabic: "ح", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
-        { arabic: "ث", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
-        { arabic: "ه", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
-        { arabic: "ش", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
-        {
-          arabic: "خ",
-          groups: ["hams", "tafkhim"],
-          info: "🟡 HAMS + 🔺 TAFKHIM",
-        },
-        {
-          arabic: "ص",
-          groups: ["hams", "tafkhim", "asafir"],
-          info: "🟡 HAMS + 🔺 TAFKHIM + 🔷 ASAFIR",
-        },
-        {
-          arabic: "س",
-          groups: ["hams", "asafir"],
-          info: "🟡 HAMS + 🔷 ASAFIR - Sifflante",
-        },
-        { arabic: "ك", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
-        { arabic: "ت", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
-
-        // 🔺 Tafkhim (7 lettres) - celles pas encore mentionnées
-        {
-          arabic: "ض",
-          groups: ["tafkhim"],
-          info: "🔺 TAFKHIM - Lettre lourde",
-        },
-        {
-          arabic: "غ",
-          groups: ["tafkhim"],
-          info: "🔺 TAFKHIM - Lettre lourde",
-        },
-        {
-          arabic: "ظ",
-          groups: ["tafkhim"],
-          info: "🔺 TAFKHIM - Lettre lourde",
-        },
-
-        // 🔷 Asafir (3 lettres) - celle pas encore mentionnée
-        { arabic: "ز", groups: ["asafir"], info: "🔷 ASAFIR - Sifflante" },
-
-        // Autres lettres (pas dans ces 4 groupes)
+        // Ordre de l'alphabet arabe (29 lettres)
         {
           arabic: "ا",
           groups: [],
           info: "Lettre neutre - Aucun groupe spécifique",
         },
         {
+          arabic: "ب",
+          groups: ["qalqala"],
+          info: "🟧 QALQALA - Rebondissante",
+        },
+        { arabic: "ت", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+        { arabic: "ث", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+        {
+          arabic: "ج",
+          groups: ["qalqala"],
+          info: "🟧 QALQALA - Rebondissante",
+        },
+        { arabic: "ح", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+        {
+          arabic: "خ",
+          groups: ["hams", "tafkhim"],
+          info: "🟡 HAMS + 🔺 TAFKHIM",
+        },
+        {
+          arabic: "د",
+          groups: ["qalqala"],
+          info: "🟧 QALQALA - Rebondissante",
+        },
+        {
+          arabic: "ذ",
+          groups: [],
+          info: "Lettre neutre - Aucun groupe spécifique",
+        },
+        {
+          arabic: "ر",
+          groups: [],
+          info: "Lettre neutre - Aucun groupe spécifique",
+        },
+        { arabic: "ز", groups: ["asafir"], info: "🔶 ASAFIR - Sifflante" },
+        {
+          arabic: "س",
+          groups: ["hams", "asafir"],
+          info: "🟡 HAMS + 🔶 ASAFIR",
+        },
+        { arabic: "ش", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+        {
+          arabic: "ص",
+          groups: ["hams", "tafkhim", "asafir"],
+          info: "🟡 HAMS + 🔺 TAFKHIM + 🔶 ASAFIR",
+        },
+        {
+          arabic: "ض",
+          groups: ["tafkhim"],
+          info: "🔺 TAFKHIM - Lettre lourde",
+        },
+        {
+          arabic: "ط",
+          groups: ["qalqala", "tafkhim"],
+          info: "🟧 QALQALA + 🔺 TAFKHIM",
+        },
+        {
+          arabic: "ظ",
+          groups: ["tafkhim"],
+          info: "🔺 TAFKHIM - Lettre lourde",
+        },
+        {
           arabic: "ع",
+          groups: [],
+          info: "Lettre neutre - Aucun groupe spécifique",
+        },
+        {
+          arabic: "غ",
+          groups: ["tafkhim"],
+          info: "🔺 TAFKHIM - Lettre lourde",
+        },
+        { arabic: "ف", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+        {
+          arabic: "ق",
+          groups: ["qalqala", "tafkhim"],
+          info: "🟧 QALQALA + 🔺 TAFKHIM",
+        },
+        { arabic: "ك", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+        {
+          arabic: "ل",
           groups: [],
           info: "Lettre neutre - Aucun groupe spécifique",
         },
@@ -765,6 +770,7 @@
           groups: [],
           info: "Lettre neutre - Aucun groupe spécifique",
         },
+        { arabic: "ه", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
         {
           arabic: "و",
           groups: [],
@@ -776,22 +782,11 @@
           info: "Lettre neutre - Aucun groupe spécifique",
         },
         {
-          arabic: "ل",
-          groups: [],
-          info: "Lettre neutre - Aucun groupe spécifique",
-        },
-        {
-          arabic: "ر",
-          groups: [],
-          info: "Lettre neutre - Aucun groupe spécifique",
-        },
-        {
-          arabic: "ذ",
+          arabic: "ى",
           groups: [],
           info: "Lettre neutre - Aucun groupe spécifique",
         },
       ];
-
       const letterDisplay = document.getElementById("letterDisplay");
       const pronunciationDisplay = document.getElementById("pronunciation");
       const randomBtn = document.getElementById("randomBtn");
