@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>
+      Flashcards Tajwid - Qalqala, Hams, Tafkhim, Asafir | Apprendre les Règles
+      du Tajwid
+    </title>
+    <meta
+      name="description"
+      content="Apprenez les 4 groupes de lettres du Tajwid (Qalqala, Hams, Tafkhim, Asafir) grâce à des flashcards interactives. Entraînement simple et gratuit pour maîtriser les règles de récitation coranique."
+    />
+    <meta
+      name="keywords"
+      content="tajwid, qalqala, hams, tafkhim, asafir, lettres arabes, règles tajwid, apprendre coran, récitation coranique, flashcards arabe, apprentissage tajwid"
+    />
+    <meta name="author" content="Flashcards Arabe — Youness FTN" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="French" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://younessftn.github.io/flashcards-tajwid/"
+    />
+    <meta
+      property="og:title"
+      content="Flashcards Tajwid - Qalqala, Hams, Tafkhim, Asafir"
+    />
+    <meta
+      property="og:description"
+      content="Exercez-vous à reconnaître les 4 groupes de lettres du Tajwid avec des flashcards interactives. Idéal pour débutants et étudiants en récitation coranique."
+    />
+    <meta
+      property="og:image"
+      content="https://younessftn.github.io/flashcards-tajwid/og-image.jpg"
+    />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://younessftn.github.io/flashcards-tajwid/"
+    />
+    <meta
+      property="twitter:title"
+      content="Flashcards Tajwid - Qalqala, Hams, Tafkhim, Asafir"
+    />
+    <meta
+      property="twitter:description"
+      content="Outil gratuit pour maîtriser les 4 groupes de lettres du Tajwid : Qalqala (rebondissantes), Hams (soufflées), Tafkhim (lourdes), Asafir (sifflantes)."
+    />
+    <meta
+      property="twitter:image"
+      content="https://younessftn.github.io/flashcards-tajwid/og-image.jpg"
+    />
+
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://younessftn.github.io/flashcards-tajwid/"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://younessftn.github.io/flashcards-tajwid/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://younessftn.github.io/flashcards-tajwid/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://younessftn.github.io/flashcards-tajwid/favicon-180x180.png"
+    />
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Flashcards Tajwid - Qalqala, Hams, Tafkhim, Asafir",
+        "description": "Application web gratuite pour apprendre les 4 groupes de lettres du Tajwid (Qalqala, Hams, Tafkhim, Asafir) avec des flashcards interactives.",
+        "url": "https://younessftn.github.io/flashcards-tajwid/",
+        "applicationCategory": "EducationalApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "operatingSystem": "Any",
+        "inLanguage": "fr-FR",
+        "educationalUse": "Apprentissage des règles du Tajwid",
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        }
+      }
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+          "Segoe UI", sans-serif;
+        background: #0a0a0a;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 10px;
+          align-items: flex-start;
+          padding-top: 20px;
+        }
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(139, 92, 246, 0.15) 0%,
+          transparent 70%
+        );
+        top: -250px;
+        right: -250px;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(59, 130, 246, 0.1) 0%,
+          transparent 70%
+        );
+        bottom: -200px;
+        left: -200px;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .container {
+        background: rgba(17, 17, 17, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        padding: 60px 50px;
+        backdrop-filter: blur(20px);
+        max-width: 550px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 30px 20px;
+          border-radius: 20px;
+        }
+      }
+
+      h1 {
+        color: #ffffff;
+        margin-bottom: 8px;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 26px;
+        }
+      }
+
+      .subtitle {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 15px;
+        margin-bottom: 50px;
+        font-weight: 400;
+      }
+
+      @media (max-width: 768px) {
+        .subtitle {
+          font-size: 14px;
+          margin-bottom: 30px;
+        }
+      }
+
+      .letter-container {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 20px;
+        padding: 80px 40px;
+        margin-bottom: 35px;
+        position: relative;
+        cursor: help;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        touch-action: pan-y;
+      }
+
+      @media (max-width: 768px) {
+        .letter-container {
+          padding: 50px 20px;
+          margin-bottom: 25px;
+          border-radius: 16px;
+        }
+      }
+
+      .letter-container:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(139, 92, 246, 0.3);
+      }
+
+      .letter-display {
+        font-size: 180px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1;
+        text-align: center;
+        user-select: none;
+        pointer-events: none;
+        font-family: "Arial", "Helvetica", sans-serif;
+      }
+
+      @media (max-width: 768px) {
+        .letter-display {
+          font-size: 130px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .letter-display {
+          font-size: 100px;
+        }
+      }
+
+      .pronunciation {
+        position: absolute;
+        bottom: -95px;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        background: rgba(17, 17, 17, 0.98);
+        border: 1px solid rgba(139, 92, 246, 0.4);
+        color: #ffffff;
+        padding: 16px 32px;
+        border-radius: 16px;
+        font-size: 18px;
+        font-weight: 500;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 10;
+        backdrop-filter: blur(20px);
+        line-height: 1.6;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+        text-align: center;
+        max-width: 90vw;
+      }
+
+      .pronunciation.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .pronunciation::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid rgba(139, 92, 246, 0.3);
+      }
+
+      @media (hover: hover) {
+        .letter-container:hover .pronunciation {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+
+      .button-container {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      #randomBtn {
+        flex: 1;
+        min-width: 200px;
+        background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+        color: white;
+        border: none;
+        padding: 18px 32px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 16px;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        touch-action: manipulation;
+        box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3),
+          0 0 0 0 rgba(139, 92, 246, 0.5);
+      }
+
+      #randomBtn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #a78bfa 0%, #818cf8 100%);
+        opacity: 0;
+        transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      #randomBtn:hover::before {
+        opacity: 1;
+      }
+
+      #randomBtn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4),
+          0 0 0 3px rgba(139, 92, 246, 0.2);
+      }
+
+      #randomBtn span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .mode-button {
+        width: 56px;
+        height: 56px;
+        min-width: 56px;
+        background: linear-gradient(
+          135deg,
+          rgba(139, 92, 246, 0.2) 0%,
+          rgba(99, 102, 241, 0.2) 100%
+        );
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        touch-action: manipulation;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15);
+      }
+
+      .mode-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(139, 92, 246, 0.4) 0%,
+          rgba(99, 102, 241, 0.4) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .mode-button:hover::before {
+        opacity: 1;
+      }
+
+      .mode-button:hover {
+        border-color: rgba(139, 92, 246, 0.6);
+        box-shadow: 0 8px 30px rgba(139, 92, 246, 0.3);
+        transform: translateY(-2px);
+      }
+
+      .mode-button:active {
+        transform: translateY(0) scale(0.95);
+      }
+
+      .mode-button span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .emoji-toggle-btn {
+        width: 56px;
+        height: 56px;
+        min-width: 56px;
+        background: linear-gradient(
+          135deg,
+          rgba(34, 197, 94, 0.2) 0%,
+          rgba(22, 163, 74, 0.2) 100%
+        );
+        border: 1px solid rgba(34, 197, 94, 0.3);
+        color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        touch-action: manipulation;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(34, 197, 94, 0.15);
+      }
+
+      .emoji-toggle-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(34, 197, 94, 0.4) 0%,
+          rgba(22, 163, 74, 0.4) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .emoji-toggle-btn:hover::before {
+        opacity: 1;
+      }
+
+      .emoji-toggle-btn:hover {
+        border-color: rgba(34, 197, 94, 0.6);
+        box-shadow: 0 8px 30px rgba(34, 197, 94, 0.3);
+        transform: translateY(-2px);
+      }
+
+      .emoji-toggle-btn:active {
+        transform: translateY(0) scale(0.95);
+      }
+
+      .emoji-toggle-btn span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .filter-container {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+      }
+
+      .filter-btn {
+        padding: 10px 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.03);
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .filter-btn .filter-emoji {
+        transition: opacity 0.3s;
+      }
+
+      .filter-btn .filter-emoji.hidden {
+        display: none;
+      }
+
+      .filter-btn:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(139, 92, 246, 0.3);
+      }
+
+      .filter-btn.active {
+        background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+        border-color: rgba(139, 92, 246, 0.5);
+        color: white;
+        font-weight: 600;
+      }
+
+      .hint {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 13px;
+        margin-top: 20px;
+        font-weight: 400;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 768px) {
+        .hint {
+          font-size: 12px;
+          margin-top: 15px;
+        }
+      }
+
+      .empty-state {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 18px;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .letter-display {
+        animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .legend {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .legend-title {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+
+      .legend-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .legend-symbol {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Flashcards Tajwid</h1>
+      <div class="subtitle">Qalqala • Hams • Tafkhim • Asafir</div>
+
+      <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">
+          Tous les groupes
+        </button>
+        <button class="filter-btn" data-filter="qalqala">
+          <span class="filter-emoji">🟦</span>
+          <span>Qalqala</span>
+        </button>
+        <button class="filter-btn" data-filter="hams">
+          <span class="filter-emoji">🟡</span>
+          <span>Hams</span>
+        </button>
+        <button class="filter-btn" data-filter="tafkhim">
+          <span class="filter-emoji">🔺</span>
+          <span>Tafkhim</span>
+        </button>
+        <button class="filter-btn" data-filter="asafir">
+          <span class="filter-emoji">🔷</span>
+          <span>Asafir</span>
+        </button>
+      </div>
+
+      <div class="letter-container">
+        <div class="letter-display" id="letterDisplay">
+          <span class="empty-state">—</span>
+        </div>
+        <div class="pronunciation" id="pronunciation">Groupe de la lettre</div>
+      </div>
+
+      <div class="button-container">
+        <button id="randomBtn">
+          <span>Lettre aléatoire</span>
+        </button>
+        <button
+          class="emoji-toggle-btn"
+          id="emojiToggleBtn"
+          title="Afficher/Masquer les emojis"
+        >
+          <span>👁️</span>
+        </button>
+        <button
+          class="mode-button"
+          id="modeBtn"
+          title="Inverser le mode d'affichage"
+        >
+          <span>⇄</span>
+        </button>
+      </div>
+
+      <p class="hint">
+        💡 Survolez ou touchez la lettre pour révéler son groupe
+      </p>
+
+      <p class="hint" style="margin-top: 30px">
+        <strong>📚 Rappel des 4 groupes :</strong><br /><br />
+
+        <strong>🟦 Qalqala (5 lettres) :</strong> ق – ط – ب – ج – د<br />
+        → Elles "rebondissent" quand elles sont sukun (ْ)<br /><br />
+
+        <strong>🟡 Hams (10 lettres) :</strong> ف – ح – ث – ه – ش – خ – ص – س –
+        ك – ت<br />
+        → Lettres soufflées (fَحَثَّهُ شَخْصٌ سَكَتْ)<br /><br />
+
+        <strong>🔺 Tafkhim (7 lettres) :</strong> خ – ص – ض – غ – ط – ق – ظ<br />
+        → Lettres lourdes/épaisses (خُصَّ ضَغْطٍ قِظْ)<br /><br />
+
+        <strong>🔷 Asafir (3 lettres) :</strong> س – ز – ص<br />
+        → Lettres sifflantes
+      </p>
+    </div>
+
+    <script>
+      const arabicLetters = [
+        // 🟦 Qalqala (5 lettres)
+        {
+          arabic: "ق",
+          groups: ["qalqala"],
+          info: "🟦 QALQALA - Rebondissante",
+        },
+        {
+          arabic: "ط",
+          groups: ["qalqala", "tafkhim"],
+          info: "🟦 QALQALA + 🔺 TAFKHIM",
+        },
+        {
+          arabic: "ب",
+          groups: ["qalqala"],
+          info: "🟦 QALQALA - Rebondissante",
+        },
+        {
+          arabic: "ج",
+          groups: ["qalqala"],
+          info: "🟦 QALQALA - Rebondissante",
+        },
+        {
+          arabic: "د",
+          groups: ["qalqala"],
+          info: "🟦 QALQALA - Rebondissante",
+        },
+
+        // 🟡 Hams (10 lettres)
+        { arabic: "ف", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+        { arabic: "ح", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+        { arabic: "ث", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+        { arabic: "ه", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+        { arabic: "ش", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+        {
+          arabic: "خ",
+          groups: ["hams", "tafkhim"],
+          info: "🟡 HAMS + 🔺 TAFKHIM",
+        },
+        {
+          arabic: "ص",
+          groups: ["hams", "tafkhim", "asafir"],
+          info: "🟡 HAMS + 🔺 TAFKHIM + 🔷 ASAFIR",
+        },
+        {
+          arabic: "س",
+          groups: ["hams", "asafir"],
+          info: "🟡 HAMS + 🔷 ASAFIR - Sifflante",
+        },
+        { arabic: "ك", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+        { arabic: "ت", groups: ["hams"], info: "🟡 HAMS - Soufflée" },
+
+        // 🔺 Tafkhim (7 lettres) - celles pas encore mentionnées
+        {
+          arabic: "ض",
+          groups: ["tafkhim"],
+          info: "🔺 TAFKHIM - Lettre lourde",
+        },
+        {
+          arabic: "غ",
+          groups: ["tafkhim"],
+          info: "🔺 TAFKHIM - Lettre lourde",
+        },
+        {
+          arabic: "ظ",
+          groups: ["tafkhim"],
+          info: "🔺 TAFKHIM - Lettre lourde",
+        },
+
+        // 🔷 Asafir (3 lettres) - celle pas encore mentionnée
+        { arabic: "ز", groups: ["asafir"], info: "🔷 ASAFIR - Sifflante" },
+
+        // Autres lettres (pas dans ces 4 groupes)
+        {
+          arabic: "ا",
+          groups: [],
+          info: "Lettre neutre - Aucun groupe spécifique",
+        },
+        {
+          arabic: "ع",
+          groups: [],
+          info: "Lettre neutre - Aucun groupe spécifique",
+        },
+        {
+          arabic: "م",
+          groups: [],
+          info: "Lettre neutre - Aucun groupe spécifique",
+        },
+        {
+          arabic: "ن",
+          groups: [],
+          info: "Lettre neutre - Aucun groupe spécifique",
+        },
+        {
+          arabic: "و",
+          groups: [],
+          info: "Lettre neutre - Aucun groupe spécifique",
+        },
+        {
+          arabic: "ي",
+          groups: [],
+          info: "Lettre neutre - Aucun groupe spécifique",
+        },
+        {
+          arabic: "ل",
+          groups: [],
+          info: "Lettre neutre - Aucun groupe spécifique",
+        },
+        {
+          arabic: "ر",
+          groups: [],
+          info: "Lettre neutre - Aucun groupe spécifique",
+        },
+        {
+          arabic: "ذ",
+          groups: [],
+          info: "Lettre neutre - Aucun groupe spécifique",
+        },
+      ];
+
+      const letterDisplay = document.getElementById("letterDisplay");
+      const pronunciationDisplay = document.getElementById("pronunciation");
+      const randomBtn = document.getElementById("randomBtn");
+      const modeBtn = document.getElementById("modeBtn");
+      const emojiToggleBtn = document.getElementById("emojiToggleBtn");
+      const letterContainer = document.querySelector(".letter-container");
+      const filterBtns = document.querySelectorAll(".filter-btn");
+
+      let currentIndex = -1;
+      let touchStartY = 0;
+      let touchMoved = false;
+      let mode = "arabic";
+      let currentFilter = "all";
+      let showEmojis = true;
+
+      function getFilteredLetters() {
+        if (currentFilter === "all") {
+          return arabicLetters;
+        }
+        return arabicLetters.filter((letter) =>
+          letter.groups.includes(currentFilter)
+        );
+      }
+
+      function removeEmojis(text) {
+        if (showEmojis) return text;
+        return text.replace(/[\u{1F300}-\u{1F9FF}]/gu, "").trim();
+      }
+
+      function getRandomLetter() {
+        const filteredLetters = getFilteredLetters();
+        if (filteredLetters.length === 0) return null;
+
+        let newIndex;
+        do {
+          newIndex = Math.floor(Math.random() * filteredLetters.length);
+        } while (
+          filteredLetters[newIndex] === arabicLetters[currentIndex] &&
+          filteredLetters.length > 1
+        );
+
+        const letter = filteredLetters[newIndex];
+        currentIndex = arabicLetters.indexOf(letter);
+        return letter;
+      }
+
+      function displayRandomLetter() {
+        const letter = getRandomLetter();
+        if (!letter) {
+          letterDisplay.innerHTML =
+            '<span class="empty-state">Aucune lettre</span>';
+          pronunciationDisplay.textContent = "Sélectionnez un autre filtre";
+          return;
+        }
+
+        if (mode === "arabic") {
+          letterDisplay.innerHTML = letter.arabic;
+          pronunciationDisplay.textContent = removeEmojis(letter.info);
+        } else {
+          letterDisplay.innerHTML = `<span style="font-size: 28px; font-weight: 500;">${removeEmojis(
+            letter.info
+          )}</span>`;
+          pronunciationDisplay.textContent = letter.arabic;
+        }
+
+        pronunciationDisplay.classList.remove("show");
+      }
+
+      function toggleEmojis() {
+        showEmojis = !showEmojis;
+        emojiToggleBtn.querySelector("span").textContent = showEmojis
+          ? "👁️"
+          : "🚫";
+        emojiToggleBtn.title = showEmojis
+          ? "Masquer les emojis"
+          : "Afficher les emojis";
+
+        // Toggle emojis in legend and filters
+        const allEmojis = document.querySelectorAll(
+          ".legend-emoji, .filter-emoji"
+        );
+        allEmojis.forEach((emoji) => {
+          if (showEmojis) {
+            emoji.classList.remove("hidden");
+          } else {
+            emoji.classList.add("hidden");
+          }
+        });
+
+        if (currentIndex !== -1) {
+          displayRandomLetter();
+        }
+      }
+
+      function toggleMode() {
+        mode = mode === "arabic" ? "info" : "arabic";
+        modeBtn.title =
+          mode === "arabic"
+            ? "Mode: Afficher la lettre arabe"
+            : "Mode: Afficher le groupe";
+
+        if (currentIndex !== -1) {
+          displayRandomLetter();
+        }
+      }
+
+      // Gestion des filtres
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          currentFilter = btn.dataset.filter;
+          displayRandomLetter();
+        });
+      });
+
+      // Gestion tactile
+      letterContainer.addEventListener(
+        "touchstart",
+        (e) => {
+          touchStartY = e.touches[0].clientY;
+          touchMoved = false;
+        },
+        { passive: true }
+      );
+
+      letterContainer.addEventListener(
+        "touchmove",
+        (e) => {
+          const touchY = e.touches[0].clientY;
+          if (Math.abs(touchY - touchStartY) > 10) {
+            touchMoved = true;
+          }
+        },
+        { passive: true }
+      );
+
+      letterContainer.addEventListener("touchend", (e) => {
+        if (!touchMoved) {
+          e.preventDefault();
+          pronunciationDisplay.classList.toggle("show");
+        }
+      });
+
+      letterContainer.addEventListener("click", (e) => {
+        if (e.pointerType !== "touch") {
+          pronunciationDisplay.classList.toggle("show");
+        }
+      });
+
+      randomBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        displayRandomLetter();
+      });
+
+      modeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleMode();
+      });
+
+      emojiToggleBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleEmojis();
+      });
+    </script>
+  </body>
+</html>
