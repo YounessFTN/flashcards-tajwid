@@ -787,6 +787,7 @@
           info: "Lettre neutre - Aucun groupe spécifique",
         },
       ];
+
       const letterDisplay = document.getElementById("letterDisplay");
       const pronunciationDisplay = document.getElementById("pronunciation");
       const randomBtn = document.getElementById("randomBtn");
@@ -804,6 +805,22 @@
 
       function getFilteredLetters() {
         if (currentFilter === "all") {
+          // Séparer les lettres avec groupes et lettres neutres
+          const lettersWithGroups = arabicLetters.filter(
+            (letter) => letter.groups.length > 0
+          );
+          const neutralLetters = arabicLetters.filter(
+            (letter) => letter.groups.length === 0
+          );
+
+          // 80% de chance pour une lettre avec groupe, 20% pour une lettre neutre
+          const useGroupLetter = Math.random() < 0.8;
+
+          if (useGroupLetter && lettersWithGroups.length > 0) {
+            return lettersWithGroups;
+          } else if (neutralLetters.length > 0) {
+            return neutralLetters;
+          }
           return arabicLetters;
         }
         return arabicLetters.filter((letter) =>
